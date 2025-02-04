@@ -170,6 +170,7 @@ class indexController extends Controller
     }
 
     public function lihatNilai(Request $request){
+       
         if ($request->tahun) {
             $id = $request->tahun . $request->semester;
             return view('dashboard.lihatnilai',[

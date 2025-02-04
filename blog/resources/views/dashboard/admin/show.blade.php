@@ -22,7 +22,7 @@
         <label for="tahun" class="form-label">Tahun</label>
             <select class="col-2" name="tahun" id="tahun" class="form-select" value="{{ old('tahun') }}">
                 @for ($i = 0; $i < count($tahun); $i++)
-                    <option value="{{ Auth::user()->id }}.{{ $tahun[$i]->years }}" @selected($user->angkatan == $tahun[$i]->years )>{{ $tahun[$i]->years }}</option>
+                    <option value="{{ $user->id }}.{{ $tahun[$i]->years }}" @selected($user->angkatan == $tahun[$i]->years )>{{ $tahun[$i]->years }}</option>
                 @endfor
             </select>
             <label for="semester">Semester</label>
